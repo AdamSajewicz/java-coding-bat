@@ -598,7 +598,7 @@ public class String1 {
             if(str.charAt(0) == 'a'){
                 firstChar = "a";
             }
-        } else if(str.length() >= 2){
+        } else {
             if(str.charAt(0) == 'a'){
                 firstChar = "a";
             }

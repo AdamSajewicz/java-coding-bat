@@ -25,12 +25,7 @@ public class Logic2 {
             int missingBigToFillGoal = needForBig - big;
             if(bigFromSmall >= missingBigToFillGoal){
                 int remainingSmall = small - (missingBigToFillGoal * 5);
-                if(amountOfSmallToFillGoal <= remainingSmall){
-                    return true;
-                }
-                else {
-                    return false;
-                }
+                return amountOfSmallToFillGoal <= remainingSmall;
             }
             else {
                 return false;
@@ -40,12 +35,7 @@ public class Logic2 {
             return false;
         }
         else if(needForBig <= big){
-            if(amountOfSmallToFillGoal <= small){
-                return true;
-            }
-            else {
-                return false;
-            }
+            return amountOfSmallToFillGoal <= small;
         }
         else {
             return false;
@@ -128,7 +118,7 @@ public class Logic2 {
         return fixTeen(a) + fixTeen(b) + fixTeen(c);
     }
     
-    public int fixTeen(int n){
+    private int fixTeen(int n){
         if((n >= 13 && n < 15) || (n > 16 && n <= 19)){
             return 0;
         }
@@ -151,7 +141,7 @@ public class Logic2 {
         return round10(a) + round10(b) + round10(c);
     }
     
-    public int round10(int num){
+    private int round10(int num){
         int reminder = num % 10;
         int decimalPart = num / 10;
         if(reminder < 5){
@@ -230,12 +220,12 @@ public class Logic2 {
         return (bb - aa == cc - bb);
     }
     
-    public int min3(int a, int b, int c){
+    private int min3(int a, int b, int c){
         int minAB = Math.min(a, b);
         return Math.min(minAB, c);
     }
     
-    public int mid3(int a, int b, int c){
+    private int mid3(int a, int b, int c){
         if((b <= a && a <= c) || (c <= a && a <= b)){
             return a;
         }
@@ -245,7 +235,7 @@ public class Logic2 {
         return c;
     }
     
-    public int max3(int a, int b, int c){
+    private int max3(int a, int b, int c){
         int maxAB = Math.max(a, b);
         return Math.max(maxAB, c);
     }
@@ -286,5 +276,4 @@ public class Logic2 {
             }
         }
     }
-    
 }

@@ -68,7 +68,7 @@ public class Warmup1 {
         if (n < 0) {
             absoluteDiference = n * (-1) + 21;
         }
-        else if (n >= 0 && n < 21) {
+        else if (n < 21) {
             absoluteDiference = 21 - n;
         }
         else {
@@ -578,12 +578,7 @@ public class Warmup1 {
                 eCounter++;
             }
         }
-        if(eCounter >= 1 && eCounter <= 3){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return eCounter >= 1 && eCounter <= 3;
     }
     
     /**
