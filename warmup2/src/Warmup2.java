@@ -102,12 +102,7 @@ public class Warmup2 {
                 return false;
             }
             else {
-                if(str.charAt(indexOfFirstXInstance + 1) == 'x') {
-                    return true;
-                }
-                else {
-                    return false;
-                }
+                return str.charAt(indexOfFirstXInstance + 1) == 'x';
             }
         }
     }
@@ -194,8 +189,8 @@ public class Warmup2 {
         }
         else {
             int counter = 0;
-            for(int i = 0; i < nums.length; i++){
-                if(nums[i] == 9) {
+            for (int num : nums) {
+                if (num == 9) {
                     counter++;
                 }
             }

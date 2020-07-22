@@ -29,9 +29,7 @@ public class Array1 {
      */
     public boolean sameFirstLast(int[] nums) {
         if(nums.length > 0){
-            if(nums[0] == nums[nums.length - 1]){
-                return true;
-            }
+            return nums[0] == nums[nums.length - 1];
         }
         return false;
     }
@@ -44,8 +42,7 @@ public class Array1 {
      * @return
      */
     public int[] makePi() {
-        int[] reVal = new int[]{3, 1, 4};
-        return reVal;
+        return new int[]{3, 1, 4};
     }
     
     /**
@@ -205,10 +202,7 @@ public class Array1 {
         if(first == 2 || first == 3){
             return true;
         }
-        if(second == 2 || second == 3){
-            return true;
-        }
-        return false;
+        return second == 2 || second == 3;
     }
     
     /**
@@ -225,9 +219,7 @@ public class Array1 {
         int first = nums[0];
         int second = nums[1];
         if(first != 2 && first != 3){
-            if(second != 2 && second != 3){
-                return true;
-            }
+            return second != 2 && second != 3;
         }
         return false;
     }
@@ -263,12 +255,7 @@ public class Array1 {
         if(nums.length < 2){
             return false;
         }
-        if((nums[0] == 2 && nums[1] == 2) ||(nums[0] == 3 && nums[1] == 3)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return (nums[0] == 2 && nums[1] == 2) || (nums[0] == 3 && nums[1] == 3);
     }
     
     /**
@@ -482,9 +469,7 @@ public class Array1 {
         }
         if(size == 2){
             if(nums[0] == 1){
-                if(nums[1] == 3){
-                    return true;
-                }
+                return nums[1] == 3;
             }
         }
         else {
@@ -581,5 +566,4 @@ public class Array1 {
             return c;
         }
     }
-    
 }

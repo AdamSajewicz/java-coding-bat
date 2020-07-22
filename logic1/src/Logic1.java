@@ -14,20 +14,10 @@ public class Logic1 {
      */
     public boolean cigarParty(int cigars, boolean isWeekend) {
         if(!isWeekend){
-            if(40 <= cigars && 60 >= cigars){
-                return true;
-            }
-            else{
-                return false;
-            }
+            return 40 <= cigars && 60 >= cigars;
         }
         else {
-            if(40 <= cigars){
-                return true;
-            }
-            else {
-                return false;
-            }
+            return 40 <= cigars;
         }
     }
     
@@ -66,20 +56,10 @@ public class Logic1 {
      */
     public boolean squirrelPlay(int temp, boolean isSummer) {
         if(isSummer){
-            if(60 <= temp && 100 >= temp){
-                return true;
-            }
-            else {
-                return false;
-            }
+            return 60 <= temp && 100 >= temp;
         }
         else {
-            if(60 <= temp && 90 >= temp){
-                return true;
-            }
-            else {
-                return false;
-            }
+            return 60 <= temp && 90 >= temp;
         }
     }
     
@@ -178,10 +158,7 @@ public class Logic1 {
         if(a == 6 || b == 6){
             return true;
         }
-        if(a + b == 6 || Math.abs(a - b) == 6){
-            return true;
-        }
-        return false;
+        return a + b == 6 || Math.abs(a - b) == 6;
     }
     
     /**
@@ -216,12 +193,7 @@ public class Logic1 {
      */
     public boolean specialEleven(int n) {
         int remaining = n % 11;
-        if(remaining < 2){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return remaining < 2;
     }
     
     /**
@@ -236,12 +208,7 @@ public class Logic1 {
      */
     public boolean more20(int n) {
         int remaining = n % 20;
-        if(remaining == 1 || remaining == 2){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return remaining == 1 || remaining == 2;
     }
     
     /**
@@ -256,12 +223,7 @@ public class Logic1 {
      */
     public boolean old35(int n) {
         if(n % 3 == 0 || n % 5 == 0){
-            if(n % 3 == 0 && n % 5 == 0){
-                return false;
-            }
-            else {
-                return true;
-            }
+            return n % 3 != 0 || n % 5 != 0;
         }
         return false;
     }
@@ -278,10 +240,7 @@ public class Logic1 {
      */
     public boolean less20(int n) {
         int remaining = n % 20;
-        if(remaining == 18 || remaining == 19){
-            return true;
-        }
-        return false;
+        return remaining == 18 || remaining == 19;
     }
     
     /**
@@ -651,10 +610,7 @@ public class Logic1 {
         if(aLeftDigit == bLeftDigit || aLeftDigit == bRightDigit){
             return true;
         }
-        if(aRightDigit == bLeftDigit || aRightDigit == bRightDigit){
-            return true;
-        }
-        return false;
+        return aRightDigit == bLeftDigit || aRightDigit == bRightDigit;
     }
     
     /**
