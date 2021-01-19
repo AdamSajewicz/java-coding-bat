@@ -6,6 +6,12 @@ import java.util.List;
 
 public class Ap1 {
     
+    public static void main(String[] args) {
+        int[] nums = new int[] {1, 3, 4};
+        Boolean result = scoresIncreasing(nums);
+        System.out.println("Result: " + result);
+    }
+    
     /**
      * Given an array of scores, return true if each score is equal or greater than the one before.
      * The array will be length 2 or more.
@@ -17,7 +23,7 @@ public class Ap1 {
      * @param scores
      * @return
      */
-    public boolean scoresIncreasing(int[] scores) {
+    public static boolean scoresIncreasing(int[] scores) {
         boolean increase = false;
         int i = 0;
         do{
@@ -96,12 +102,7 @@ public class Ap1 {
      * @return
      */
     public int scoresAverage(int[] scores) {
-        //if(scores.length % 2 == 0){
         return Math.max(average(scores, 0, (scores.length / 2) - 1), average(scores, (scores.length / 2), scores.length - 1));
-        //}
-        //else{
-        //  return Math.max(average(scores, 0, scores.length / 2), average(scores, (scores.length / 2) + 1), scores.length - 1);
-        //}
     }
     
     private int average(int[] scores, int startIndex, int endIndex){
@@ -213,7 +214,6 @@ public class Ap1 {
             if(remainder == 1 || nn == 1){
                 has1 = true;
             }
-            
         } while(!has1 && nn > 10);
         return has1;
     }
@@ -500,7 +500,6 @@ public class Ap1 {
         counterTrack = Arrays.copyOfRange(heights, start, end + 1);
         int counter = 0;
         for(int i = 0; i < counterTrack.length - 1; i++){
-            //counter += Math.abs(counterTrack[i + 1] - counterTrack[i]);
             if(counterTrack[i + 1] - counterTrack[i] >= 0){
                 counter += 2 * (counterTrack[i + 1] - counterTrack[i]);
             }
@@ -664,34 +663,19 @@ public class Ap1 {
         int aIndex = 0;
         int bIndex = 0;
         int counter = 0;
-        //int maxIteration = Math.max(a.length, b.length);
-        //String lastConsideredLetterA = "";
-        //String lastConsideredLetterB = "";
         while(aIndex != -1 && bIndex != -1){ //Wystarczy, że jedno będize -1, wtedy drugiej listy nie ma sensu sprawdzać.
             if(a[aIndex].equals(b[bIndex])){
-                //lastConsideredLetterA = a[aIndex];
-                //lastConsideredLetterB = b[bIndex];
                 counter++;
-                
                 aIndex = indexOfNextLetter(a, aIndex);
-                
-                //if(bIndex < b.length - 1){
                 bIndex = indexOfNextLetter(b, bIndex);
             }
             else if(a[aIndex].compareTo(b[bIndex]) < 0){
                 aIndex = indexOfNextLetter(a, aIndex);
-                
-                
-                //lastCountedLetterA = a[aIndex];
             }
             else {
                 bIndex = indexOfNextLetter(b, bIndex);
-                //lastCountedLetterB = b[bIndex];
             }
         };
-        //if(a[aIndex].equals(b[bIndex])){
-        //  counter++;
-        //}
         return counter;
     }
     
@@ -706,7 +690,6 @@ public class Ap1 {
                 newIndex++;
             } while(lista[newIndex].equals(currentLetter) && newIndex != lista.length - 1);
         }
-        
         return newIndex;
     }
     

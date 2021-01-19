@@ -250,7 +250,6 @@ public class Map2 {
                         strings[map.get(firstLetter)] = strings[i];
                         strings[i] = temp;
                         map.replace(firstLetter, -1);
-                        //firstLetter dać wartość na -1
                     }
                 }
                 else {

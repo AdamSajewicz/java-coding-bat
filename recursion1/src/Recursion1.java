@@ -395,9 +395,6 @@ public class Recursion1 {
         if(str.length() == 2){
             return str.charAt(0) + "*" + str.charAt(1);
         }
-        //else {
-        //  return str.charAt(0) + "*" + str.substring(1);
-        //}
         return str.charAt(0) + "*" + allStar(str.substring(1));
     }
     
@@ -444,12 +441,10 @@ public class Recursion1 {
         if(str.length() < 2){
             return str;
         }
-        //String postfix = "";
         if(str.length() == 1){
             return str;
         }
         if(str.charAt(0) == 'x'){
-            //postfix = postfix + 'x';
             return endX(str.substring(1)) + "x";
         }
         return str.charAt(0) + endX(str.substring(1));
@@ -646,7 +641,6 @@ public class Recursion1 {
         if(str.length() == 1){
             return false;
         }
-        //if(str.length() > 1){
         if(str.charAt(0) != '(' || str.charAt(str.length() - 1) != ')'){
             return false;
         }
@@ -746,7 +740,6 @@ public class Recursion1 {
         else {
             return strDist(str.substring(0, str.length() - 1), sub);
         }
-        //return 100;
     }
     
 }
