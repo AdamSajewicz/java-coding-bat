@@ -1,5 +1,7 @@
 package array3.src;
 
+import java.util.Arrays;
+
 public class Array3 {
     
     /**
