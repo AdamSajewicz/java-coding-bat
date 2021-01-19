@@ -1,4 +1,4 @@
-package string2;
+package string2.src;
 
 public class String2 {
     /**
