@@ -368,13 +368,12 @@ public class Array3 {
             }
             localMirror = 0;
             for(int i = length; i < length * 2; i++){
-                if(smunBaseChecker[i] == 1){ // dodac warunek, ze nie koniec smunBaseChecker'a
+                if(smunBaseChecker[i] == 1){
                     localMirror++;
                 }
                 else {
                     if(localMirror > candidateMirror){
                         candidateMirror = localMirror;
-                        //spr dokładnie, kiedy powinien być zerowany localMirror
                     }
                     localMirror = 0;
                 }
@@ -442,7 +441,6 @@ public class Array3 {
             clumpChecker[i] = checkNums(nums, i);
             valueChange[i] = checkValueChanges(nums, i);
         }
-        
         int clumpCounter = 0;
         for(int i = 0; i < nums.length; i++){
             if(clumpStart(valueChange, clumpChecker, i)){
@@ -510,6 +508,4 @@ public class Array3 {
             return false;
         }
     }
-    
-    
 }

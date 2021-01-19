@@ -504,7 +504,6 @@ public class Array1 {
     public int[] make2(int[] a, int[] b) {
         int[] c = new int[2];
         int aLen = a.length;
-        int bLen = b.length;
         if(aLen == 0){
             c[0] = b[0];
             c[1] = b[1];

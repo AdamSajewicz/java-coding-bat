@@ -25,7 +25,6 @@ public class String3 {
         do{
             StringBuilder word = new StringBuilder();
             do{
-                
                 if(Character.isLetter(str.charAt(i))){
                     word.append(str.charAt(i));
                 }
@@ -37,7 +36,6 @@ public class String3 {
             }
             j = i;
         }while(j < str.length());
-        
         return counter;
     }
     
@@ -61,8 +59,6 @@ public class String3 {
         StringBuilder sb = new StringBuilder(base);
         int indexOfRemove = pozycjaOf(sb.toString(), remove);
         do{
-            
-            
             if(indexOfRemove != -1){
                 sb.delete(indexOfRemove, indexOfRemove + remove.length());
             }
@@ -101,7 +97,6 @@ public class String3 {
         if(str.length() < 5){
             return false;
         }
-        
         int isCounter = 0;
         for(int i = 0; i < str.length() - 1; i++){
             if(str.substring(i).startsWith("is")){
@@ -385,7 +380,6 @@ public class String3 {
             if(probe.startsWith("is")){
                 if(okAtTheBeginning(str, i) && okAtTheEnd(str, i)){
                     sb.append(probe.substring(0, 2) + " not");
-                    //i = i + 1;
                 }
                 else{
                     sb.append(probe.substring(0, 2));

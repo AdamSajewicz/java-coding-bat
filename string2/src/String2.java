@@ -579,13 +579,11 @@ public class String2 {
             sb.append("");
             return;
         }
-        
         //if if there is no chars between words
         if(str.substring(0, i - 1).lastIndexOf(word) + word.length() == i){
             sb.append("");
             return;
         }
-        
         sb.append(str.charAt(i - 1));
         return;
     }
@@ -596,13 +594,11 @@ public class String2 {
             sb.append("");
             return;
         }
-        
         //if no chars between the next appearance of word
         if(str.substring(i + 1).indexOf(word) == i + 1){
             sb.append("");
             return;
         }
-        
         sb.append(str.charAt(i + 1));
         return;
     }
